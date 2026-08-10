@@ -17,15 +17,15 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <PlanVisit />
-        <Beliefs />
-        <Leadership />
-        <Sermons />
-        <Events />
-        <Donate />
-        <Blog />
-        <Gallery />
-        <Contact />
+<PlanVisit />
+<Beliefs />
+<Leadership />
+<Sermons />
+<Events />
+<Donate />
+<Blog /> 
+<Gallery />
+<Contact /> 
       </main>
       <Footer />
     </div>

@@ -129,7 +129,7 @@ export default function Beliefs() {
             What We Believe
           </p>
           <h2 className="mt-3 font-serif text-3xl font-bold text-navy-900 sm:text-4xl">
-            Foundations of Our Faith
+            Statement of Faith
           </h2>
           <p className="mt-4 text-lg text-navy-600">
             Our beliefs are rooted in Scripture and centered on the gospel of

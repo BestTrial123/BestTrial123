@@ -1,4 +1,5 @@
 import { useState } from "react";
+import chapelLogo from "../assets/Christ-Empowerment-Chapel-logo.png";
 
 const navLinks = [
   { label: "Visit", href: "#visit" },
@@ -20,11 +21,13 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         {/* Brand */}
         <a href="#top" className="flex items-center gap-2">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gold-500 font-serif text-lg font-bold text-navy-900">
-            GC
-          </span>
+          <img
+  src={chapelLogo}
+  alt="Christ-Empowerment-chapel-logo"
+  className="h-10 w-10 object-contain"
+/>
           <span className="font-serif text-lg font-semibold tracking-tight text-white sm:text-xl">
-            Grace Community Church
+            Christ Empowerment Chapel
           </span>
         </a>
 

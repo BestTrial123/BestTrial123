@@ -85,10 +85,12 @@ const visitPoints = [
 ];
 
 const services = [
-  { label: "Sunday Worship", time: "9:00 AM & 11:00 AM" },
-  { label: "Sunday School", time: "10:15 AM" },
-  { label: "Wednesday Bible Study", time: "7:00 PM" },
+  { label: "Sunday School", time: "9:30 AM – 10:30 AM" },
+  { label: "Sunday Worship Service", time: "10:30 AM – 12:30 PM" },
+  { label: "Midweek Service (Wed)", time: "9:00 AM – 12:30 PM" },
+  { label: "Bible Study (Fri)", time: "6:00 PM – 7:00 PM" },
 ];
+
 
 export default function PlanVisit() {
   return (
@@ -163,7 +165,7 @@ export default function PlanVisit() {
                   ))}
                 </div>
                 <p className="mt-6 text-sm text-white/70">
-                  Directions: 1234 Grace Lane, Springfield, ST 56789 · Free
+                  Directions: Telecom Community, Wein Town Monrovia, Liberia · Free
                   parking & kids check-in at the west entrance.
                 </p>
               </div>

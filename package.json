@@ -1,20 +1,29 @@
 {
-  "name": "grace-community-church",
+  "name": "christ-empowerment-chapel",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run dev\"",
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "server": "node server/index.js",
+    "build": "vite build"
   },
   "dependencies": {
+    "@stripe/react-stripe-js": "^6.8.0",
+    "@stripe/stripe-js": "^9.13.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "stripe": "^22.4.0"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.11",
     "@vitejs/plugin-react": "^4.5.0",
+    "concurrently": "^10.0.4",
+    "netlify-cli": "^27.1.1",
     "tailwindcss": "^4.1.11",
     "vite": "^6.3.5"
   }

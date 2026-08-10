@@ -30,9 +30,7 @@ export default function Hero() {
           className="hero-anim font-serif text-4xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl"
           style={{ animationDelay: "0.3s" }}
         >
-          Grace Community
-          <span className="block text-gold-400">Church</span>
-        </h1>
+          Christ Empowerment Chapel</h1>
         <p
           className="hero-anim mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/80 sm:text-xl"
           style={{ animationDelay: "0.45s" }}
@@ -60,13 +58,14 @@ export default function Hero() {
 
         {/* Service times strip */}
         <div
-          className="hero-anim mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-4 rounded-2xl border border-white/15 bg-white/10 p-6 backdrop-blur-md sm:grid-cols-3"
+          className="hero-anim mx-auto mt-16 grid max-w-2xl grid-cols-2 gap-4 rounded-2xl border border-..."
           style={{ animationDelay: "0.8s" }}
         >
           {[
-            { day: "Sunday", time: "9:00 AM" },
-            { day: "Sunday", time: "11:00 AM" },
-            { day: "Wednesday", time: "7:00 PM" },
+            { day: "Sunday", time: "9:30 AM" },
+            { day: "Sunday", time: "10:30 AM" },
+            { day: "Wednesday", time: "9:00 AM" },
+            { day: "Friday", time: "6:00 PM" },
           ].map((s, i) => (
             <div key={i} className="text-center">
               <p className="text-xs font-semibold uppercase tracking-widest text-gold-300">
