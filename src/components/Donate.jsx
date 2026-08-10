@@ -11,7 +11,7 @@ import {
 const presetAmounts = [25, 50, 100, 250, 500];
 
 // Replace with your actual publishable key from the Stripe dashboard
-const stripePromise = loadStripe("pk_test_51U1oubBwvHt9gBiBshVFtiiy47PqWGIwz9hHuC9Qr9Cds6hmQVj0G0qIX3m079TwMGjP029MjFuars6PQg4BM8fe00MU2UiTlZ");
+const stripePromise = loadStripe("pk_live_51U1ouRJ5nJvphFMGSOeDIOuCdnLITvPdBpwIVQmmwXrT2yY6ZS31ibPsSPc2M7DfTW61VzU0wxUX1c7lVNR04G2C00q5X8PqX9");
 
 function CheckoutForm({ selectedAmount, fund }) {
   const stripe = useStripe();
