@@ -21,12 +21,23 @@ export function getStaff() {
   return resolve(staff);
 }
 
-export function submitPrayerRequest(data) {
-  console.info("Prayer request submitted:", data);
-  return Promise.resolve({ ok: true });
+
+export async function submitPrayerRequest(data) {
+  const res = await fetch('/.netlify/functions/send-message', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ type: 'prayer', name: data.name, email: data.email, message: data.request }),
+  });
+  if (!res.ok) throw new Error('Failed to send prayer request');
+  return res.json();
 }
 
-export function submitContactMessage(data) {
-  console.info("Contact message submitted:", data);
-  return Promise.resolve({ ok: true });
+export async function submitContactMessage(data) {
+  const res = await fetch('/.netlify/functions/send-message', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ type: 'contact', name: data.name, email: data.email, subject: data.subject, message: data.message }),
+  });
+  if (!res.ok) throw new Error('Failed to send contact message');
+  return res.json();
 }
