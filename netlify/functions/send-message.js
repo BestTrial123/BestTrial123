@@ -12,7 +12,7 @@ export const handler = async (event) => {
 
     await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: ['cgeorgerev30@outlook.com', 'spdolo79@gmail.com'],
+      to: ['cgeorgerev30@outlook.com'],
       reply_to: email,
       subject: emailSubject,
       html: `
