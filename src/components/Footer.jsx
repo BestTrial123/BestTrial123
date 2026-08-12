@@ -1,6 +1,6 @@
 import Reveal from "./Reveal";
 import chapelLogo from "../assets/Christ-Empowerment-Chapel-logo.png";
-import React from "react";
+import React, {useState} from "react";
 const quickLinks = [
   { label: "Plan Your Visit", href: "#visit" },
   { label: "What We Believe", href: "#beliefs" },
@@ -54,6 +54,29 @@ const socials = [
 },
 ]; //
 export default function Footer() {
+  const [email, setEmail] = useState("");
+const [status, setStatus] = useState("");
+const [message, setMessage] = useState("");
+
+async function handleSubscribe(e) {
+  e.preventDefault();
+  setStatus("loading");
+  try {
+    const res = await fetch("/.netlify/functions/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Something went wrong");
+    setStatus("success");
+    setMessage(data.message);
+    setEmail("");
+  } catch (err) {
+    setStatus("error");
+    setMessage(err.message);
+  }
+}
   return (
     <footer className="bg-navy-950 text-white">
       {/* Newsletter strip */}
