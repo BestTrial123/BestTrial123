@@ -16,7 +16,11 @@ export const handler = async (event) => {
       };
     }
 
-    const store = getStore('subscribers');
+    const store = getStore({
+        name: 'subscribers',
+        siteId: process.env.SITE_ID,
+        token: process.env.NETLIFY_API_TOKEN,
+    });
     const key = email.trim().toLowerCase();
 
     const existing = await store.get(key);
