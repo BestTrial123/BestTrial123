@@ -10,6 +10,7 @@
     "build": "vite build"
   },
   "dependencies": {
+    "@netlify/blobs": "^10.7.12",
     "@stripe/react-stripe-js": "^6.8.0",
     "@stripe/stripe-js": "^9.13.0",
     "cors": "^2.8.6",

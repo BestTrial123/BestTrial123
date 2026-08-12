@@ -1,6 +1,6 @@
 import Reveal from "./Reveal";
 import chapelLogo from "../assets/Christ-Empowerment-Chapel-logo.png";
-
+import React from "react";
 const quickLinks = [
   { label: "Plan Your Visit", href: "#visit" },
   { label: "What We Believe", href: "#beliefs" },
@@ -70,22 +70,30 @@ export default function Footer() {
             </div>
             <form
               className="flex w-full max-w-md gap-2"
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleSubscribe}
             >
               <input
-                type="email"
-                required
-                placeholder="Enter your email"
-                className="flex-1 rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm text-white placeholder-white/50 outline-none transition focus:border-gold-400"
-              />
+  type="email"
+  required
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  placeholder="Enter your email"
+  className="flex-1 rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm text-white"
+/>
               <button
                 type="submit"
+                disabled={status === "loading"}
                 className="rounded-full bg-gold-500 px-6 py-3 text-sm font-bold text-navy-900 transition hover:bg-gold-400"
               >
-                Subscribe
+                {status === "loading" ? "Subscribing..." : "Subscribe"}
               </button>
             </form>
           </div>
+          {message && (
+            <p className={'mt-2 text-center text-sm ' + (status === 'error' ? 'text-red-500' : 'text-green-500')}>
+              {message}
+            </p>
+          )}
         </div>
       </Reveal>
 
