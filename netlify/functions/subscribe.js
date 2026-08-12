@@ -18,8 +18,8 @@ export const handler = async (event) => {
 
     const store = getStore({
         name: 'subscribers',
-        siteId: process.env.SITE_ID,
-        token: process.env.NETLIFY_API_TOKEN,
+        siteId: process.env.BLOBS_SITE_ID,
+        token: process.env.BLOBS_TOKEN,
     });
     const key = email.trim().toLowerCase();
 
