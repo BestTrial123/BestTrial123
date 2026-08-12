@@ -18,7 +18,7 @@ export const handler = async (event) => {
 
     const store = getStore({
         name: 'subscribers',
-        siteId: process.env.BLOBS_SITE_ID,
+        siteID: process.env.BLOBS_SITE_ID,
         token: process.env.BLOBS_TOKEN,
     });
     const key = email.trim().toLowerCase();
